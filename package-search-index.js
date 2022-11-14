@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.example.tarea2loslavadores","l":"Controlador"},{"m":"com.example.tarea2loslavadores","l":"Modelo"},{"m":"com.example.tarea2loslavadores","l":"Vista"}];updateSearchResults();
