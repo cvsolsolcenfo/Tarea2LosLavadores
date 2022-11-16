@@ -1,19 +1,19 @@
-package Controlador;
+package Vista;
 
 import Modelo.*;
-import Vista.Menu;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.util.ArrayList;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("'" +
+                "'" +
+                "hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Banco Los Lavadores!");
         stage.setScene(scene);
@@ -121,7 +121,9 @@ public class HelloApplication extends Application {
 
     }
 
-    //POLIMORFISMO > TRABAJAR CON LA HERENCIA/ YA NO/ Mejo todas difererentes
+    //POLIMORFISMO > Trabajar con la herencia
+    // Ya no
+    // Mejor todas difererentes
     public static void crearCuentaCorriente(Banco banco, Menu menu) {
         String identificacion;
         String cuentaNumero;
@@ -152,7 +154,7 @@ public class HelloApplication extends Application {
         }
 
     }
-
+    //CUENTA AHORRO PROGRAMADO
     private static void crearCuentaAhorroProgramado(Banco banco, Menu menu, Banco banco1) {
         String identificacion;
         boolean ok;
@@ -181,7 +183,7 @@ public class HelloApplication extends Application {
                     menu.mostrarTexto("Esta cuenta de ahorros programado ya existe!");
                 }
                 menu.mostrarTexto("Cuenta de ahorro programado creada con éxito.");
-                // No se como decirle cada viernes, jueves... saque dinero, cuando se liga se retira, y se supone que esa sera la fecha
+                // No se como decirle cada viernes, jueves... saque dinero, cuando se liga se retira, entonces se supone que esa sera la fecha
                 if (cuentaAhorroProgramado.aplicarRebajo()) {
                     menu.mostrarTexto("Se ha hecho el primer depósito a la cuenta de ahorro programado");
                 } else {
@@ -194,7 +196,7 @@ public class HelloApplication extends Application {
             menu.mostrarTexto("ERROR: Usted aun no tiene una cuenta cliente");
         }
     }
-
+    //CUENTA AHORROS
     public static void crearCuentaAhorros(Banco banco, Menu menu) {
         String identificacion;
         String cuentaNumero;
